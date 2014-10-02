@@ -9,15 +9,15 @@
 public class Building
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private int x;
+    private int height;
+    private int width;
 
     /**
      * Default constructor for objects of class Building
      */
     public Building()
     {
-        // initialise instance variables
-        x = 0;
+        
     }
 
     /**
