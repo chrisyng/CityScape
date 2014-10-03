@@ -1,40 +1,44 @@
-
-
+import java.awt.Rectangle;
+import java.awt.geom.Ellipse2D;
+import java.awt.Color;
+import java.util.Random;
+import java.awt.Graphics2D;
 /**
- * Write a description of class Building here.
+ * Class that defines a building with starting positions, height, and width.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Ng 
+ * @version 2 October 2014
  */
 public class Building
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    /** int specifying building's height */
     private int height;
+    /** int specifying building's width */
     private int width;
+    /**int specifying leftmost coordinate */
+    private int xleft;
+    /** int specifying top coordinate */
+    private int ytop;
 
     /**
      * Default constructor for objects of class Building
      */
-    public Building()
+    public Building(int xleft, int ytop, int width, int height)
     {
-        
+        this.height = height;
+        this.width = width;
+        this.xleft = xleft;
+        this.ytop = ytop;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * Draws a building based on variables initialized in constructor
      */
-    public int sampleMethod(int y)
+    public void draw(Graphics2D g2)
     {
-        // put your code here
-        return x+y;
+       Rectangle mainBuilding = new Rectangle(xleft, ytop, width, height);
+       g2.draw(mainBuilding);
+        
     }
 
 }

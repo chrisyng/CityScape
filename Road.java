@@ -3,8 +3,8 @@
 /**
  * Write a description of class Road here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Ng
+ * @version 3 October 2014
  */
 public class Road
 {
