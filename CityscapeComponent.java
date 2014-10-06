@@ -27,7 +27,10 @@ public class CityscapeComponent extends JComponent
         Graphics2D g2 = (Graphics2D) g;
         Building building1 = new Building(0, 0, 400, 500);
         building1.draw(g2);
-        
+        Sky sky = new Sky(this.getWidth(), this.getHeight());
+        sky.draw(g2);
+        Hill hill = new Hill(this.getHeight()/4, this.getWidth(), 0, 0);
+        hill.draw(g2);
         
     }
 
