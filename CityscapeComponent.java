@@ -23,21 +23,26 @@ public class CityscapeComponent extends JComponent
      * @param    y    description of parameter y
      * @return    description of the return value
      */
-    public void paintComponent(Graphics g)
+    
+    private int calculateBuildingHeight(Building building, Hill hill)
     {
+        return this.getHeight()-building.getStartPos()-hill.getHillHeight();
+    }
+    public void paintComponent(Graphics g)
+    {        
+        
         Graphics2D g2 = (Graphics2D) g;
-        Random randomGen = new Random();
-        Building building1 = new Building(0, 0, 400, 500);
-        building1.draw(g2);
+        Random randomGen = new Random();        
         Sky sky = new Sky(this.getWidth(), this.getHeight());
         sky.draw(g2);        
         Hill hill = new Hill(0, this.getHeight()-this.getHeight()/4, this.getWidth(), this.getHeight()/4);
         hill.draw(g2);
-        // draws a random number of buildigns between 1 and 6
-        for (int i = 0; i<(randomGen.nextInt(6)+1); i++);{
-            int buildingWidth = this.getWidth()/(i*2);
-            int xLeft = xLeft + buildingWidth;
+        int space = this.getWidth()/9;
+        Building building1 = new Building(space, this.getHeight()/6, space, this.calculateBuildingHeight(building1, hill));
+        building1.draw(g2);
+        
+        
                         
-        }
-    }        
-}
+    }
+}        
+

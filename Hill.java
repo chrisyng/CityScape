@@ -13,19 +13,20 @@ public class Hill
     private int hillHeight;
     private int hillWidth;
     private int yTop;
-    private int xLeft;        
+    private int xLeft;    
     public Hill(int xLeft, int yTop, int hillWidth, int hillHeight)
     {
         this.hillHeight = hillHeight;
         this.hillWidth = hillWidth;
         this.yTop = yTop;
-        this.xLeft = xLeft;
+        this.xLeft = xLeft;        
     }
     
-    public int getGroundLevel()
+    public int getHillHeight()
     {
-        return this.yTop;
-    }
+        return this.hillHeight;
+    }    
+    
 
     /**
      * An example of a method - replace this comment with your own

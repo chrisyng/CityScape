@@ -30,7 +30,10 @@ public class Building
         this.ytop = ytop;
     }
     
-    
+    public int getStartPos() 
+    {
+        return this.ytop;
+    }    
     
     /**
      * Draws a building based on variables initialized in constructor
