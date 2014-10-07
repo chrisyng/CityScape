@@ -15,8 +15,7 @@ public class Sky
     public Sky(int windowWidth, int windowHeight)
     {
         this.windowWidth = windowWidth;
-        this.windowHeight = windowHeight;
-        
+        this.windowHeight = windowHeight;        
     }
     
     public void draw(Graphics2D g2)

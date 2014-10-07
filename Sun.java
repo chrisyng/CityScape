@@ -1,14 +1,14 @@
 
 
 /**
- * Write a description of class Sun here.
+ * Class that has 
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class Sun
 {
-    /** description of instance variable x (add comment for each instance variable) */
+    
     private int x;
 
     /**

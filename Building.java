@@ -19,7 +19,6 @@ public class Building
     private int xleft;
     /** int specifying top coordinate */
     private int ytop;
-
     /**
      * Default constructor for objects of class Building
      */
@@ -30,15 +29,22 @@ public class Building
         this.xleft = xleft;
         this.ytop = ytop;
     }
-
+    
+    
+    
     /**
      * Draws a building based on variables initialized in constructor
      */
     public void draw(Graphics2D g2)
     {
        Rectangle mainBuilding = new Rectangle(xleft, ytop, width, height);
+       g2.setColor(Color.GRAY);
        g2.draw(mainBuilding);
-        
-    }
-
+       g2.fill(mainBuilding);        
+              
+    }    
+       
+    
 }
+
+

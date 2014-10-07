@@ -1,6 +1,7 @@
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
+import java.util.Random;
 
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
@@ -25,13 +26,18 @@ public class CityscapeComponent extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
+        Random randomGen = new Random();
         Building building1 = new Building(0, 0, 400, 500);
         building1.draw(g2);
         Sky sky = new Sky(this.getWidth(), this.getHeight());
-        sky.draw(g2);
-        Hill hill = new Hill(this.getHeight()/4, this.getWidth(), 0, 0);
+        sky.draw(g2);        
+        Hill hill = new Hill(0, this.getHeight()-this.getHeight()/4, this.getWidth(), this.getHeight()/4);
         hill.draw(g2);
-        
-    }
-
+        // draws a random number of buildigns between 1 and 6
+        for (int i = 0; i<(randomGen.nextInt(6)+1); i++);{
+            int buildingWidth = this.getWidth()/(i*2);
+            int xLeft = xLeft + buildingWidth;
+                        
+        }
+    }        
 }
