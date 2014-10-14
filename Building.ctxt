@@ -1,9 +1,9 @@
 #BlueJ class context
-comment0.params=xleft\ ytop\ width\ height
+comment0.params=xleft\ ytop\ width\ windowHeight
 comment0.target=Building(int,\ int,\ int,\ int)
-comment0.text=\r\n\ Default\ constructor\ for\ objects\ of\ class\ Building\r\n
-comment1.params=
-comment1.target=int\ getStartPos()
+comment0.text=\r\n\ Default\ constructor\ for\ objects\ of\ class\ Building\r\n\ @param\ windowHeight\ the\ height\ of\ the\ JFrame\ window\r\n\ @param\ width\ width\ of\ the\ building\r\n\ @param\ xleft\ starting\ x\ position\r\n\ @param\ ytop\ starting\ y\ position\r\n
+comment1.params=hillHeight
+comment1.target=void\ setHillHeight(int)
 comment2.params=g2
 comment2.target=void\ draw(java.awt.Graphics2D)
 comment2.text=\r\n\ Draws\ a\ building\ based\ on\ variables\ initialized\ in\ constructor\r\n

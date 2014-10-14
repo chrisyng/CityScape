@@ -1,40 +1,47 @@
-
+import java.awt.Graphics2D;
+import java.awt.geom.Ellipse2D;
+import java.awt.Color;
 
 /**
- * Write a description of class Moon here.
+ * A class that models an animated moon that moves across the sky.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Christopher Ng   
+ * @version 10/8/14
  */
 public class Moon
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
-
+    /** starting left position coordinate */
+    private int xLeft;
+    /**starting top position coordinate */
+    private int yTop;
+    /** vertical height of moon */
+    private int height;
+    /** horizontal width of moon */
+    private int width;
     /**
      * Default constructor for objects of class Moon
+     * @param xLeft starting left x coordinate
+     * @param yTop starting top y coordinate
+     * @param width width of moon
+     * @param height height of moon
      */
-    public Moon()
+    public Moon(int xLeft, int yTop, int width, int height)
     {
-        // initialise instance variables
-        x = 0;
+        this.xLeft = xLeft;
+        this.yTop = yTop;
+        this.width = width;
+        this.height = height;
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
+     * creates a yellow ellipse object and fills it
      */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x+y;
+    public void draw(Graphics2D g2)
+    {       
+        Ellipse2D.Double moon = new Ellipse2D.Double(xLeft, yTop, width, height);
+        g2.setColor(Color.YELLOW);
+        g2.draw(moon);        
+        g2.fill(moon);
     }
 
 }

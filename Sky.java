@@ -11,8 +11,7 @@ import java.awt.Graphics2D;
 public class Sky
 {
     private int windowHeight;
-    private int windowWidth;
-    private boolean isNight;
+    private int windowWidth;    
     public Sky(int windowWidth, int windowHeight)
     {
         this.windowWidth = windowWidth;
@@ -25,11 +24,6 @@ public class Sky
         g2.setColor(Color.BLUE);
         g2.draw(sky);
         g2.fill(sky);
-    } 
-    
-    public void setTime(boolean isNight)
-    {
-        this.isNight = isNight;
-    }
+    }     
 
 }

@@ -12,38 +12,44 @@ import java.awt.Graphics2D;
 public class Building
 {
     /** int specifying building's height */
-    private int height;
+    private int windowHeight;
     /** int specifying building's width */
     private int width;
     /**int specifying leftmost coordinate */
     private int xleft;
     /** int specifying top coordinate */
     private int ytop;
+    /** int for storing height of the hill object in CityScape */
+    private int hillHeight;
     /**
      * Default constructor for objects of class Building
+     * @param windowHeight the height of the JFrame window
+     * @param width width of the building
+     * @param xleft starting x position
+     * @param ytop starting y position
      */
-    public Building(int xleft, int ytop, int width, int height)
+    public Building(int xleft, int ytop, int width, int windowHeight)
     {
-        this.height = height;
+        this.windowHeight = windowHeight;
         this.width = width;
         this.xleft = xleft;
         this.ytop = ytop;
     }
     
-    public int getStartPos() 
+    public void setHillHeight(int hillHeight)
     {
-        return this.ytop;
-    }    
-    
+        this.hillHeight = hillHeight;
+    }   
+        
     /**
      * Draws a building based on variables initialized in constructor
      */
     public void draw(Graphics2D g2)
     {
-       Rectangle mainBuilding = new Rectangle(xleft, ytop, width, height);
+       Rectangle mainBuilding = new Rectangle(xleft, ytop, width, windowHeight-ytop-hillHeight);
        g2.setColor(Color.GRAY);
        g2.draw(mainBuilding);
-       g2.fill(mainBuilding);        
+       g2.fill(mainBuilding);
               
     }    
        

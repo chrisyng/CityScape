@@ -22,27 +22,33 @@ public class CityscapeComponent extends JComponent
      *            (what the method guarantees upon completion)
      * @param    y    description of parameter y
      * @return    description of the return value
-     */
+     */    
     
-    private int calculateBuildingHeight(Building building, Hill hill)
-    {
-        return this.getHeight()-building.getStartPos()-hill.getHillHeight();
-    }
     public void paintComponent(Graphics g)
-    {        
-        
+    {       
         Graphics2D g2 = (Graphics2D) g;
+        int space = this.getWidth()/9;        
+        int windowHeight = this.getHeight();
         Random randomGen = new Random();        
         Sky sky = new Sky(this.getWidth(), this.getHeight());
-        sky.draw(g2);        
+        sky.draw(g2);
+        Moon moon = new Moon(0, windowHeight/8, 100, 100);
+        moon.draw(g2);
         Hill hill = new Hill(0, this.getHeight()-this.getHeight()/4, this.getWidth(), this.getHeight()/4);
-        hill.draw(g2);
-        int space = this.getWidth()/9;
-        Building building1 = new Building(space, this.getHeight()/6, space, this.calculateBuildingHeight(building1, hill));
+        hill.draw(g2);        
+        int hillHeight = hill.getHillHeight();
+        Building building1 = new Building(space, randomGen.nextInt(windowHeight)-hill.getHillHeight(), space, windowHeight);
+        building1.setHillHeight(hillHeight);
         building1.draw(g2);
-        
-        
-                        
+        Building building2 = new Building(space*3, randomGen.nextInt(windowHeight)-hill.getHillHeight(), space, windowHeight);
+        building2.setHillHeight(hillHeight);
+        building2.draw(g2);
+        Building building3 = new Building(space*5, randomGen.nextInt(windowHeight)-hill.getHillHeight(), space, windowHeight);
+        building3.setHillHeight(hillHeight);
+        building3.draw(g2);
+        Building building4 = new Building(space*7, randomGen.nextInt(windowHeight)-hill.getHillHeight(), space, windowHeight);
+        building4.setHillHeight(hillHeight);
+        building4.draw(g2);
     }
 }        
 
