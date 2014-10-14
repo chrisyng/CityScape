@@ -12,6 +12,7 @@ import java.util.Random;
  */
 public class CityscapeComponent extends JComponent
 {
+    public static boolean isNight;
     /**
      * An example of a method - replace this comment with your own
      *    that describes the operation of the method

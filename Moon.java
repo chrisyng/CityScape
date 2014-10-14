@@ -43,5 +43,11 @@ public class Moon
         g2.draw(moon);        
         g2.fill(moon);
     }
+    
+    public void changePos()
+    {
+        this.xLeft = this.xLeft +150;
+    }
+    
 
 }

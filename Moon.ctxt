@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.params=xLeft\ yTop\ width\ height
 comment0.target=Moon(int,\ int,\ int,\ int)
-comment0.text=\r\n\ Default\ constructor\ for\ objects\ of\ class\ Moon\r\n\ @param\ xLeft\ starting\ left\ x\ coordinate\r\n\ @param\ yTop\ starting\ top\ y\ coordinate\r\n\ @param\ width\ width\ of\ moon\r\n\ @param\ height\ height\ of\ moon\r\n
+comment0.text=\n\ Default\ constructor\ for\ objects\ of\ class\ Moon\n\ @param\ xLeft\ starting\ left\ x\ coordinate\n\ @param\ yTop\ starting\ top\ y\ coordinate\n\ @param\ width\ width\ of\ moon\n\ @param\ height\ height\ of\ moon\n
 comment1.params=g2
 comment1.target=void\ draw(java.awt.Graphics2D)
-comment1.text=\r\n\ creates\ a\ yellow\ ellipse\ object\ and\ fills\ it\r\n
+comment1.text=\n\ creates\ a\ yellow\ ellipse\ object\ and\ fills\ it\n
 numComments=2
