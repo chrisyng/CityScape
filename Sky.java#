@@ -27,7 +27,6 @@ public class Sky
             g2.draw(sky);
             g2.fill(sky);
         }
-        
         while (CityscapeComponent.isNight == false)
         {
             g2.setColor(Color.BLUE);
