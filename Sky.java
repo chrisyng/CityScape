@@ -21,14 +21,13 @@ public class Sky
     public void draw(Graphics2D g2)
     {
         Rectangle sky = new Rectangle(0, 0, windowWidth, windowHeight);
-        while (CityscapeComponent.isNight)
+        while (CityScapeComponent.isNight)
         {
             g2.setColor(Color.BLACK);
             g2.draw(sky);
             g2.fill(sky);
         }
-        
-        while (CityscapeComponent.isNight == false)
+        while (CityScapeComponent.isNight == false)
         {
             g2.setColor(Color.BLUE);
             g2.draw(sky);

@@ -5,5 +5,5 @@ comment1.params=
 comment1.target=int\ getHillHeight()
 comment2.params=g2
 comment2.target=void\ draw(java.awt.Graphics2D)
-comment2.text=\r\n\ creates\ a\ hill\ rectangle\ and\ draws\ it\ with\ the\ graphics\ object\r\n
+comment2.text=\n\ creates\ a\ hill\ rectangle\ and\ draws\ it\ with\ the\ graphics\ object\n
 numComments=3

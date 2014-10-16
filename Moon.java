@@ -32,21 +32,6 @@ public class Moon
         this.width = width;
         this.height = height;
     }
-    
-    public void changePos()
-    {
-        this.xLeft = this.xLeft +150;
-    }
-    
-    public void resetPos()
-    {
-        this.xLeft = 0;
-    }
-    
-    public int getXPos()
-    {
-        return this.xLeft;
-    }
 
     /**
      * creates a yellow ellipse object and fills it
@@ -57,8 +42,12 @@ public class Moon
         g2.setColor(Color.YELLOW);
         g2.draw(moon);        
         g2.fill(moon);
-    }   
+    }
     
-       
+    public void changePos()
+    {
+        this.xLeft = this.xLeft +150;
+    }
+    
 
 }
